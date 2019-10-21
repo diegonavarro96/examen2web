@@ -33,7 +33,7 @@ app.get('/met', function (req, res) {
             error: "Debes enivar el query search"
         })
     } 
-        museos.busqueda(req.query.search, function (error, dataMuseos) {
+        met.busqueda(req.query.search, function (error, dataMuseos) {
             if (error) {
                 return res.send({
                     error: error
