@@ -17,11 +17,6 @@ app.get("/students/:id", (req, res) => {
     })
   })
    
-  app.get('/', function (req, res) {
-    res.send({
-        greeting: 'Bienvendio a la app de alumnos!'
-    })
-})
 
 
 ///
@@ -46,12 +41,9 @@ app.get('/met', function (req, res) {
 
 
 
-app.get('/', function (req, res) {
-    res.send({
-        greeting: 'Bienvendio a app de museos!'
-    })
-})
-
+app.get('/', function(req, res){
+    res.sendFile(__dirname + '/index.html');
+  });
 
 
 // no section found
