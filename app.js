@@ -1,5 +1,5 @@
 const express = require('express')
-const museos = require('./met.js')
+const met = require('./met.js')
 const Port = process.env.PORT || 3000
 const app = express()
 const request = require('request')
@@ -27,7 +27,7 @@ app.get("/students/:id", (req, res) => {
 ///
 
 /////////Museos///////////////////
-app.get('/museos', function (req, res) {
+app.get('/met', function (req, res) {
     if (!req.query.search) {
         return res.send({
             error: "Debes enivar el query search"
